@@ -1,9 +1,9 @@
 language: c
 sudo: false # only for faster builds
 script:
-  - clang -coverage -O0 hello.c -o hello
-  - ./hello
-  - gcov hello.c
+  - clang -coverage -O0 main.c -o main
+  - ./main
+  - gcov main.c
 
 # uncomment and edit the following line if your project needs to run something other than `rake`:
 # script: bundle exec rspec spec
