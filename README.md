@@ -1,2 +1,2 @@
 # LaboServ
-Ejemplo para la integracin continua con Travis.
+Ejemplo para la integracion continua con Travis.
