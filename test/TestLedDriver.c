@@ -6,7 +6,7 @@
  */
 
 
-#include "unity_fixture.h"
+#include "../unity/unity_fixture.h"
 #include "LedDriver.h"
 
 TEST_GROUP(LedDriver);

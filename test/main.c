@@ -8,7 +8,7 @@
  */
 
 
-#include "unity_fixture.h"
+#include "../unity/unity_fixture.h"
 
 static void RunAllTest(void)
 {
