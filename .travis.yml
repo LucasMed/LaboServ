@@ -1,6 +1,7 @@
 language: c
 sudo: false # only for faster builds
 script:
+  - cd modules/
   - clang -coverage -O0 main.c -o main
   - ./main
   - gcov main.c
