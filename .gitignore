@@ -87,3 +87,9 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+#Eclipse
+.settings
+Default/
+.cproject
+.project
