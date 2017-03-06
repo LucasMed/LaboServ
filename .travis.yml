@@ -20,8 +20,8 @@ script:
   - make -s default noStdlibMalloc
   - make -s C89
   - cd ../../../../test
-  - gcc -I ../unity -I ../modules -coverage -O2 -Wall -c -fmessage-length=0 -o test/main.o ../test/main.c
-  - gcc -o LaboServ modules/LedDriver.o test/TestLedDriver.o test/main.o unity/unity.o unity/unity_fisture.o
+  - gcc -I ../unity -I ../modules -coverage -O2 -Wall -c -fmessage-length=0 -o test/main.o test/main.c
+  - gcc -o LaboServ ../modules/LedDriver.o test/TestLedDriver.o test/main.o ../unity/unity.o ../unity/unity_fisture.o
   - ./LaboServ
   - gcov main.c
 after_success:
