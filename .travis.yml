@@ -20,7 +20,7 @@ script:
   - make -s default noStdlibMalloc
   - make -s C89
   - cd ../../../../test
-  - gcc -I../unity -I../modules -coverage -O0 main.c -o main
+  - gcc -I ../unity -I ../modules -coverage -O0 main.c -o main
   - ./main
   - gcov main.c
 after_success:
