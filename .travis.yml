@@ -9,7 +9,7 @@ matrix:
 before_install:
   - if [ "$TRAVIS_OS_NAME" == "linux" ]; then sudo apt-get install --assume-yes --quiet gcc-multilib; fi
 install: gem install rspec
-script:
+before_install:
   - wget https://github.com/ThrowTheSwitch/Unity/archive/master.zip
   - unzip master.zip
   - cd Unity-master
@@ -22,7 +22,8 @@ script:
   - cd ../../../examples/example_1 && make -s ci
   - cd ../example_2 && make -s ci
   - cd ../example_3 && rake
-  - cd ../../../../test
+script:
+  - cd test
   - gcc -I../unity -I../modules -coverage -O0 main.c -o main
   - ./main
   - gcov main.c
