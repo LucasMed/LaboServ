@@ -7,8 +7,8 @@
  *  Resumen: Prueba de Unit Test con Travis.
  */
 
-
-#include "../unity/unity_fixture.h"
+#include "unity.h"
+#include "unity_fixture.h"
 
 static void RunAllTest(void)
 {
