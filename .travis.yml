@@ -26,6 +26,10 @@ script:
   - cd ../../../examples/example_1 && make -s ci
   - cd ../example_2 && make -s ci
   - cd ../example_3 && rake
+  - cd ../../../../test
++  - gcc -I../unity -I../modules -coverage -O0 main.c -o main
+   - ./main
+   - gcov main.c
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 # uncomment and edit the following line if your project needs to run something other than `rake`:
