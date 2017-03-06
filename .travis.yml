@@ -19,7 +19,7 @@ script:
   - cd ../extras/fixture/test && rake ci
   - make -s default noStdlibMalloc
   - make -s C89
-  - ls ../../../../../test
+  - ls ../../../../
   - gcc -I../unity -I../modules -coverage -O0 main.c -o main
   - ./main
   - gcov main.c
