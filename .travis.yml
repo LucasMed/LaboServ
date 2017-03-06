@@ -16,7 +16,7 @@ install: gem install rspec
 script:
   - wget https://github.com/ThrowTheSwitch/Unity/archive/master.zip
   - unzip master.zip
-  - cd master
+  - cd Unity-master
   - cd test && rake ci
   - make -s
   - make -s DEBUG=-m32
