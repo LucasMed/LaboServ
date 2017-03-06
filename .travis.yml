@@ -2,8 +2,8 @@ language: c
 sudo: false # only for faster builds
 script:
   - cd test/
-  - gcc -ILaboServ/unity -ILaboServ/modules -coverage -O0 -o main main.c
-  - gcc -o modules/LedDriver test/TestLedDriver test/main unity/unity unity/unity_fixture
+  - gcc -ILaboServ/unity -ILaboServ/modules -coverage -O0 -o main.o main.c
+  - gcc -o LaboServ modules/LedDriver.o test/TestLedDriver.o test/main.o unity/unity.o unity/unity_fixture.o
   - ./main
   - gcov main.c
 after_success:
