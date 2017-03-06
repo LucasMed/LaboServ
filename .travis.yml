@@ -14,10 +14,10 @@ install: gem install rspec
 script:
   - wget https://github.com/ThrowTheSwitch/Unity/archive/master.zip
   - unzip master.zip
-  - cd test && rake ci
+  - cd test
   - make -s
   - make -s DEBUG=-m32
-  - cd ../extras/fixture/test && rake ci
+  - cd ../extras/fixture/test
   - make -s default noStdlibMalloc
   - make -s C89
   - cd ../../../examples/example_1 && make -s ci
